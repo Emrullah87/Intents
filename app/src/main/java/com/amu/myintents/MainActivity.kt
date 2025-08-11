@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         val implicitButton = findViewById<Button>(R.id.implicitButton)
         implicitButton.setOnClickListener {
             val implicitIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-//            val implicitIntent = Intent.makeMainSelectorActivity(Intent.ACTION_MAIN, Intent.CATEGORY_APP_GALLERY) // Beispiel für Galerie öffnen
             startActivity(implicitIntent)
         }
 
