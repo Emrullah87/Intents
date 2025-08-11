@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
         explicitButton.setOnClickListener {
             val explicitIntent = Intent(this, SecondActivit::class.java)
             startActivity(explicitIntent)
+
+            //somit geht er beim zurück Button gleich raus!
+            finish()
         }
 
     }
