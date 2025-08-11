@@ -1,6 +1,7 @@
 package com.amu.myintents
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,15 @@ class MainActivity : AppCompatActivity() {
 
             //somit geht er beim zurück Button gleich raus!
             finish()
+        }
+
+
+        //implicit Intent
+        val url = "https://www.google.com" //Der öffnet den default Browser
+        val implicitButton = findViewById<Button>(R.id.implicitButton)
+        implicitButton.setOnClickListener {
+            val implicitIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(implicitIntent)
         }
 
     }
